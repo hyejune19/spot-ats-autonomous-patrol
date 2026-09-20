@@ -1,0 +1,17 @@
+*.usd
+*.usda
+*.usdc
+*.usdz
+*.pt
+*.pth
+*.onnx
+*.pdf
+*.env
+.env*
+*.log
+__pycache__/
+.runtime/
+evidence/
+build/
+install/
+log/

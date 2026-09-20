@@ -1,0 +1,98 @@
+[
+  {
+    "command": "현재 odom 좌표 기준 x=2.0m, y=0.5m 위치로 이동한 다음 결과를 보고하고 기다려.",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "latency_seconds": 4.569555672991555,
+    "fallback": false,
+    "plan": {
+      "mission_id": "mission-unique",
+      "intent": "현재 odom 좌표 기준 x=2.0m, y=0.5m 위치로 이동한 다음 결과를 보고하고 기다려.",
+      "steps": [
+        {
+          "task": "move_to",
+          "params": {
+            "goal": {
+              "x": 2.0,
+              "y": 0.5,
+              "yaw": 0.0
+            }
+          },
+          "guard": null,
+          "retry": 1
+        },
+        {
+          "task": "report_and_wait",
+          "params": {},
+          "guard": null,
+          "retry": 0
+        }
+      ],
+      "version": "1.0.0",
+      "constraints": [
+        "safe_backstop",
+        "allowed_actions_only"
+      ],
+      "replan_rules": {
+        "lost_target_sec": 5.0,
+        "battery_rtb": 0.18,
+        "hard_stuck_timeout_sec": 20.0
+      }
+    }
+  },
+  {
+    "command": "A구역에 가서 주변에 사람이 있는지 확인하고 관측 결과를 보고해.",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "latency_seconds": 6.54286643199157,
+    "fallback": false,
+    "plan": {
+      "mission_id": "mission-a-scan-001",
+      "intent": "A구역에 가서 주변에 사람이 있는지 확인하고 관측 결과를 보고해.",
+      "steps": [
+        {
+          "task": "move_to",
+          "params": {
+            "goal": {
+              "x": 5.0,
+              "y": 5.0,
+              "yaw": 0.0
+            }
+          },
+          "guard": null,
+          "retry": 1
+        },
+        {
+          "task": "scan",
+          "params": {
+            "watch_classes": [
+              "person"
+            ],
+            "sweep_deg": 160.0,
+            "yaw_rate_dps": 24.0,
+            "duration": 25.0,
+            "report_on_found": true
+          },
+          "guard": null,
+          "retry": 1
+        },
+        {
+          "task": "report_and_wait",
+          "params": {},
+          "guard": null,
+          "retry": 0
+        }
+      ],
+      "version": "1.0.0",
+      "constraints": [
+        "safe_backstop",
+        "allowed_actions_only"
+      ],
+      "replan_rules": {
+        "lost_target_sec": 5.0,
+        "battery_rtb": 0.18,
+        "hard_stuck_timeout_sec": 20.0
+      }
+    }
+  }
+]

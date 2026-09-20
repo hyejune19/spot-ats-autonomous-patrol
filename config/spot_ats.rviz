@@ -1,0 +1,70 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+Visualization Manager:
+  Class: ""
+  Global Options:
+    Background Color: 20; 28; 43
+    Fixed Frame: odom
+    Frame Rate: 20
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Ground reference / 1 m
+      Enabled: true
+      Plane Cell Count: 30
+      Cell Size: 1
+      Color: 70; 85; 103
+    - Class: rviz_default_plugins/LaserScan
+      Name: 2D LIDAR / scan
+      Enabled: true
+      Topic:
+        Value: /scan
+        Reliability Policy: Reliable
+      Color: 255; 190; 70
+      Color Transformer: FlatColor
+      Size (m): 0.06
+      Style: Spheres
+    - Class: rviz_default_plugins/PointCloud2
+      Name: 3D LIDAR / point_cloud
+      Enabled: true
+      Topic:
+        Value: /point_cloud
+        Reliability Policy: Reliable
+      Color Transformer: AxisColor
+      Axis: Z
+      Size (m): 0.025
+      Style: Points
+    - Class: rviz_default_plugins/Path
+      Name: NAV2 planned path
+      Enabled: true
+      Topic:
+        Value: /plan
+      Color: 70; 245; 180
+      Line Style: Billboards
+      Line Width: 0.07
+    - Class: rviz_default_plugins/Odometry
+      Name: Actual robot pose
+      Enabled: true
+      Topic:
+        Value: /odom
+      Keep: 40
+      Position Tolerance: 0.1
+      Angle Tolerance: 0.1
+    - Class: rviz_default_plugins/TF
+      Name: Coordinate frames
+      Enabled: true
+      Show Names: true
+      Marker Scale: 0.4
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 22
+      Pitch: 1.2
+      Yaw: 0.8
+      Focal Point:
+        X: 0
+        Y: 0
+        Z: 0
+Window Geometry:
+  Width: 1280
+  Height: 800
