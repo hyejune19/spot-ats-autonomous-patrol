@@ -17,6 +17,7 @@ p.add_argument('--seconds',type=float,default=180)
 p.add_argument('--goal',action='store_true')
 p.add_argument('--plan',help='Validated LLM plan record JSON; first move_to is executed')
 a=p.parse_args()
+a.goal = a.goal or bool(a.plan)
 target=[2.0,.5]
 if a.plan:
     plan_records=json.loads(Path(a.plan).read_text())
