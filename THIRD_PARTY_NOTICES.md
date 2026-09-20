@@ -4,7 +4,7 @@
 
 | 구성요소 | 출처 | 취급 |
 |---|---|---|
-| ATS 기반 소프트웨어와 기구 | engiengi | CC BY-NC-ND 4.0이다. 수정된 외부 소스와 모델을 이 저장소에 재배포하지 않는다 |
+| ATS 기반 소프트웨어와 기구 | 엥지유니버스 | CC BY-NC-ND 4.0이다. 수정된 외부 소스와 모델을 이 저장소에 재배포하지 않는다 |
 | Spot 로봇 | Boston Dynamics / NVIDIA Isaac 자산 | 이름과 제품 설명을 출처와 함께 사용한다. 모델 파일을 배포하지 않는다 |
 | Isaac Sim·Isaac Lab | NVIDIA | 설치된 로컬 환경에서 실행한다 |
 | ROS 2·Nav2·RViz | 각 upstream 프로젝트 | 시스템 설치 의존성으로 사용한다 |
