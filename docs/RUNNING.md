@@ -50,6 +50,7 @@ Nav2 설정은 설치된 기본 YAML을 바탕으로 `prepare_nav.py`가 생성�
 ```bash
 "$ISAAC_PYTHON" scripts/perception_replay.py
 "$ISAAC_PYTHON" scripts/build_media.py
+"$ISAAC_PYTHON" scripts/build_figures.py
 ```
 
 YOLO 재생은 신뢰하는 로컬 체크포인트를 사용하여 기록된 RGB 프레임에 실제 추론을 수행한다. 실시간 통합 성능 측정과는 구별한다. MP4는 H.264·yuv420p·faststart를 사용하며, README에는 GIF를 직접 삽입한다.

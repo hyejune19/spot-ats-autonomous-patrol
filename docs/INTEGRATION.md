@@ -2,7 +2,7 @@
 
 ## 하나의 프로젝트로 구성하는 기준
 
-SPOT+ATS는 사족보행 이동 플랫폼에 2축 관측 장치를 결합하고, 인식 결과를 순찰 임무에 사용하는 프로젝트이다. 개발 디렉터리별로 결과를 나열하지 않고 이동·관측·인지·임무의 기능 경계로 구성한다. 동일한 역할의 구현이 여럿이면 실행 검증 결과와 인터페이스 호환성을 기준으로 하나를 선택한다.
+SPOT+ATS는 사족보행 이동 플랫폼에 ATS(Auto Targeting System)의 2축 기구를 결합하고, 인식 결과를 순찰 임무에 사용하는 프로젝트이다. 개발 디렉터리별로 결과를 나열하지 않고 이동·관측·인지·임무의 기능 경계로 구성한다. 동일한 역할의 구현이 여럿이면 실행 검증 결과와 인터페이스 호환성을 기준으로 하나를 선택한다.
 
 | 기능 | 선택한 구현 | 선택 근거 |
 |---|---|---|
@@ -34,5 +34,4 @@ ATS 원본 URDF의 joint1은 continuous, joint2는 revolute이다. joint2의 원
 ## 참고
 
 - [Spot 제품 설명 — Boston Dynamics](https://bostondynamics.com/products/spot/)
-- [ATS 기반 프로젝트 — engiengi/SpotATS_ws](https://github.com/engiengi/SpotATS_ws)
-- [원본의 CC BY-NC-ND 4.0 조건](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+- [외부 구성요소의 출처와 배포 조건](../THIRD_PARTY_NOTICES.md)
